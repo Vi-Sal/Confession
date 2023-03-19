@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Consession</title>
+    <link rel="icon" href="img/love-icon.webp">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:wght@100;300;500;900&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Koulen', cursive;
+            font-size: 2rem;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem;
+            background-color: rgb(253, 227, 231);
+            color: white;
+        }
+        .container{
+            background-color: plum;
+            padding: 2rem 1rem 2rem 2rem;
+            border-radius: 20px;
+            height: 12rem;
+            width: 20rem;
+        }
+        .btn{
+            font-size: 1.1rem;
+            padding: 0 1.5rem;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            transition: all .2s ease;
+        }
+        .btnPrimary{
+            background-color: purple;
+            color: white;
+        }
+        .btnSecondary{
+            background-color: palevioletred;
+            color: purple;
+            padding: 0 1rem;
+        }
+        .moving{
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text">Do you love me ? 💕</h2>
+        <button class="btn btnPrimary">Yes</button>
+        <button class="btn btnSecondary ">No</button>
+    </div>
+</body>
+<script>
+
+    const btnYes = document.querySelector(".btnPrimary");
+    const btnNo  = document.querySelector(".btnSecondary");
+    const text = document.querySelector(".text");
+
+    btnYes.addEventListener("click", ()=> {
+        text.innerHTML = "I love you too 😍";
+    })
+    btnNo.addEventListener("mouseover", ()=> {
+
+        // if(btnNo.classList.contains("moving")){
+        //     btnNo.classList.remove("moving");
+        // }
+        // else{
+        //     btnNo.classList.add("moving");
+        // }
+        
+        btnNo.classList.toggle("moving");
+    })
+
+</script>
+</html>
